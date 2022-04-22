@@ -12,12 +12,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1>
-          <span>
-            🇨🇦 <a href="https://codein.ca">codein.ca</a>
-          </span>{" "}
-          - this is under construction <br />
-        </h1>
+        <a href="https://codein.ca">🇨🇦 codein.ca</a>
+        <h1 style={{ textAlign: "center" }}>This is under construction</h1>
 
         <Image
           src="/codein-logo.png"
