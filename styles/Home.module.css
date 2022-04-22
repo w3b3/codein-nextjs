@@ -13,9 +13,7 @@
 }
 
 .container a {
-  color: crimson;
   border-bottom: 10px solid rgba(0, 0, 0, 0.1);
-  text-decoration: none;
 }
 
 .container a:hover,
