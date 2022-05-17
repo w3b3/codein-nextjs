@@ -1,0 +1,63 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container a {
+  border-bottom: 10px solid rgba(0, 0, 0, 0.1);
+}
+
+.container a:hover,
+.container a:focus,
+.container a:active {
+  border-bottom: 10px solid crimson;
+}
+
+.container .h1 {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.blogContainer {
+  background-image: url("../public/codein-logo.png");
+  background-color: #fafafa;
+  background-attachment: fixed;
+  background-blend-mode: soft-light;
+  background-clip: border-box;
+  background-origin: border-box;
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: 1000px;
+  z-index: 2;
+  flex: 1;
+  max-width: 800px;
+}
+
+.post {
+  border-bottom: 1px solid;
+  padding: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  /*flex-direction: column;*/
+}
+
+.post a {
+  word-break: break-word;
+  margin-right: 1em;
+}
+
+.post .content {
+  font-size: 1.5rem;
+  line-height: 1.75;
+  width: 100%;
+}
