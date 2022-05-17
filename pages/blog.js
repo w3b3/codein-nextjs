@@ -1,6 +1,5 @@
 import styles from "../styles/Blog.module.css";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 
 export async function getServerSideProps(context) {
@@ -21,29 +20,13 @@ export default function Blog({ data }) {
 
       <main className={styles.main}>
         <section>
-          <h1 className={styles.h1}>
-            <Image
-              className={styles.blogImage}
-              src="/daniel_IMG_0655-with-certs.png"
-              alt="Daniel LinkedIn profile photo"
-              width={70}
-              height={70}
-            />{" "}
-            🖍🧘🏽‍♀️🤔 + <a href="https://linkedin.ca/in/brasileiro">@LinkedIn</a>
-          </h1>
+          <Link href="https://linkedin.ca/in/brasileiro">
+            Hi there! I 🖍 here and on @LinkedIn
+          </Link>
         </section>
         <section className={styles.blogContainer}>
           {posts.map((el, i) => (
             <article className={styles.post} key={el.post_id}>
-              {/*<span className="timestamp">*/}
-              {/*  {new Date(el.post_timestamp).toLocaleDateString("en", {*/}
-              {/*    weekday: "long",*/}
-              {/*    hour: "2-digit",*/}
-              {/*    day: "2-digit",*/}
-              {/*    hour12: true,*/}
-              {/*    month: "long",*/}
-              {/*  })}*/}
-              {/*</span>{" "}*/}
               <p className={styles.content}>{el.post_title}</p>
               {el.post_body && <Link href={el.post_body}>{el.post_body}</Link>}
               <button disabled>Edit</button>

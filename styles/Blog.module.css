@@ -1,10 +1,10 @@
 .container {
-  padding: 0 2rem;
+  /*padding: 0 2rem;*/
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  /*padding: 4rem 0;*/
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -29,23 +29,24 @@
 }
 
 .blogContainer {
-  background-image: url("../public/codein-logo.png");
-  background-color: #fafafa;
-  background-attachment: fixed;
-  background-blend-mode: soft-light;
-  background-clip: border-box;
-  background-origin: border-box;
-  background-position: center;
-  background-repeat: repeat-y;
-  background-size: 1000px;
+  /*background-image: url("../public/codein-logo.png");*/
+  /*background-color: #fafafa;*/
+  /*background-attachment: fixed;*/
+  /*background-blend-mode: soft-light;*/
+  /*background-clip: border-box;*/
+  /*background-origin: border-box;*/
+  /*background-position: center;*/
+  /*background-repeat: repeat-y;*/
+  /*background-size: 1000px;*/
   z-index: 2;
   flex: 1;
-  max-width: 800px;
+  max-width: min(800px, 100vw);
 }
 
 .post {
+  padding: 1em;
   border-bottom: 1px solid;
-  padding: 2em;
+  /*padding: 2em;*/
   display: flex;
   flex-wrap: wrap;
   /*flex-direction: column;*/
