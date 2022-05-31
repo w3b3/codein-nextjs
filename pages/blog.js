@@ -30,7 +30,7 @@ export default function Blog({ data }) {
           <ol>
             <li>Add category dropdown to enable post filtering by tags</li>
             <li>Enable users to sign up (AWS Cognito)</li>
-            <li>Create newsletter flow (AWS SES -> mail list feature)</li>
+            <li>Create newsletter flow (AWS SES, mail list feature)</li>
             <li>
               Enable authenticated users to add content (AWS Lambda, API
               Gateway, DataStax AstraDB - Apache Cassandra DBaaS)
