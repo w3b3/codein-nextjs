@@ -28,7 +28,7 @@
   font-size: 4rem;
 }
 
-.blogContainer {
+.blogBody {
   /*background-image: url("../public/codein-logo.png");*/
   /*background-color: #fafafa;*/
   /*background-attachment: fixed;*/
@@ -48,17 +48,23 @@
   border-bottom: 1px solid;
   /*padding: 2em;*/
   display: flex;
-  flex-wrap: wrap;
-  /*flex-direction: column;*/
+  /*flex-wrap: wrap;*/
+  flex-direction: column;
 }
 
 .post a {
   word-break: break-word;
-  margin-right: 1em;
+  margin: auto;
 }
 
 .post .content {
   font-size: 1.5rem;
   line-height: 1.75;
   width: 100%;
+  word-break: break-word;
+}
+
+.blogHeader {
+  max-width: clamp(400px, 50vw, 800px);
+  margin: 0 auto;
 }
