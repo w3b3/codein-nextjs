@@ -15,10 +15,14 @@ export default function Home() {
       <main className={styles.main}>
         <Link href={"blog"} passHref>
           <Image
-            src="/codein-logo.png"
+            priority={true}
+            quality={100}
+            src="/codein-logo.webp"
             alt="codein.ca photo"
             width={500}
             height={500}
+            placeholder={"blur"}
+            blurDataURL={"/codein-logo-blur.webp"}
           />
         </Link>
 
