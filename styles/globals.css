@@ -57,3 +57,10 @@ a:active {
     margin: 0 4px;
     font-size: 0.8em;
 }
+
+@media screen and (max-width: 640px) {
+    .footer {
+        display: none;
+        visibility: hidden;
+    }
+}

@@ -26,17 +26,15 @@ class MyDocument extends Document {
             />
             <Link href={"/"}>🏠</Link>
             <Link href={"https://www.linkedin.com/in/brasileiro"}>👋🏽 Hi!</Link>
-            <Link href={"https://www.paypal.com/paypalme/w3b3"}>
-              💸 Pay? Thks!
-            </Link>
-            <Link href={"https://www.linkedin.com/my-items/saved-posts/"}>
-              🎗Saved
-            </Link>
-            <Link href={"https://github.com/w-b-dev"}>🦧GitHub</Link>
+            <Link href={"https://www.paypal.com/paypalme/w3b3"}>💸 Pay</Link>
             <Link href={"/blog"}>🤓</Link>
           </header>
           <Main />
           <footer className="footer">
+            <Link href={"https://github.com/w-b-dev"}>🦧Repos</Link>
+            <Link href={"https://www.linkedin.com/my-items/saved-posts/"}>
+              🎗Saved
+            </Link>
             <Link
               href={
                 "https://aws.amazon.com/architecture/?nc2=h_ql_exm&awsf.quickstart-architecture-page-filter=highlight%23new"
@@ -120,6 +118,13 @@ class MyDocument extends Document {
               }
             >
               SPOF
+            </Link>
+            <Link
+              href={
+                "https://www.destroyallsoftware.com/screencasts/catalog/a-compiler-from-scratch"
+              }
+            >
+              destroyallsoftware
             </Link>
           </footer>
           <NextScript />
