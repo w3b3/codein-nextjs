@@ -30,7 +30,7 @@
   /*background-size: 1000px;*/
   z-index: 2;
   flex: 1;
-  max-width: min(800px, 100vw);
+  width: clamp(50%, 100%, 600px);
 }
 
 .blogBodyTitle {
@@ -38,6 +38,20 @@
   border-left: 10px solid crimson;
   padding-left: 10px;
   color: crimson;
+  display: flex;
+}
+
+/*.postsSelector option {*/
+/*  font-size: 0.5em;*/
+/*}*/
+.postsSelector {
+  border: none;
+  background-color: crimson;
+  color: whitesmoke;
+  font-size: 0.8em;
+  margin-left: auto;
+  width: clamp(100px, 30%, 50%);
+  text-align: center;
 }
 
 .post {
