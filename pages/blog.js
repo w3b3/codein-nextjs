@@ -22,11 +22,7 @@ export default function Blog({ data }) {
         <h1>Blog</h1>
 
         <section className={styles.blogHeader}>
-          <p>
-            The goal is to make this blog a brain dump of relevant notes we have
-            encountered over the course of years engineering web apps.
-          </p>
-          <p>Next steps include:</p>
+          <p>a brain dump of some of my experiences. what&apos;s next?</p>
           <ol>
             <li>Add category dropdown to enable post filtering by tags</li>
             <li>Enable users to sign up (AWS Cognito)</li>
