@@ -39,7 +39,7 @@ export default function Blog({ data }) {
         </section>
         {/*<Link href="https://linkedin.ca/in/brasileiro">Daniel @LinkedIn</Link>*/}
         <section className={styles.blogBody}>
-          <h2>Posts</h2>
+          <h2 className={styles.blogBodyTitle}>Posts</h2>
           {posts.map((el, i) => (
             <article className={styles.post} key={el.post_id}>
               <p className={styles.content}>{el.post_title}</p>

@@ -19,8 +19,8 @@ export default function Home() {
             quality={100}
             src="/codein-logo.webp"
             alt="codein.ca photo"
-            width={500}
-            height={500}
+            width={425}
+            height={309}
             placeholder={"blur"}
             blurDataURL={"/codein-logo-blur.webp"}
           />

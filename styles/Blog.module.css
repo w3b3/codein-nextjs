@@ -12,16 +12,6 @@
   align-items: center;
 }
 
-.container a {
-  border-bottom: 10px solid rgba(0, 0, 0, 0.1);
-}
-
-.container a:hover,
-.container a:focus,
-.container a:active {
-  border-bottom: 10px solid crimson;
-}
-
 .container .h1 {
   margin: 0;
   line-height: 1.15;
@@ -43,9 +33,16 @@
   max-width: min(800px, 100vw);
 }
 
+.blogBodyTitle {
+  border-bottom: 3px solid crimson;
+  border-left: 10px solid crimson;
+  padding-left: 10px;
+  color: crimson;
+}
+
 .post {
   padding: 1em;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #ccc;
   /*padding: 2em;*/
   display: flex;
   /*flex-wrap: wrap;*/
@@ -58,7 +55,7 @@
 }
 
 .post .content {
-  font-size: 1.5rem;
+  font-size: 1.2em;
   line-height: 1.75;
   width: 100%;
   word-break: break-word;
