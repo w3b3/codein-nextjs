@@ -30,6 +30,10 @@ a:active {
     /*border-bottom: 4px solid rgba(0, 0, 0, 0.8);*/
 }
 
+.header a, .header span {
+    text-align: center;
+}
+
 .header {
     border-left: 1px solid #ccc;
     z-index: 10;
@@ -68,8 +72,33 @@ a:active {
 }
 
 @media screen and (max-width: 640px) {
+    body {
+        /*display: flex;*/
+        flex-direction: column;
+    }
+
     .footer {
         display: none;
         visibility: hidden;
+    }
+
+    .header {
+        border-bottom: 1px solid #ccc;
+        border-left: none;
+        /*z-index: 10;*/
+        /*background-color: #fbfbfb;*/
+        min-width: clamp(50px, 20vw, 400px);
+        height: fit-content;
+        /*top: 0;*/
+        /*left: 0;*/
+        position: sticky;
+        display: flex;
+        flex-direction: row-reverse;
+        /*align-items: center;*/
+        /*justify-content: space-around;*/
+    }
+
+    .header a:not(.alwaysShow) {
+        display: none;
     }
 }

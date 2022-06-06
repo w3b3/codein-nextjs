@@ -11,7 +11,6 @@ export default function Home() {
         <meta name="description" content="codein.ca" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className={styles.main}>
         <Link href={"blog"} passHref>
           <Image

@@ -62,7 +62,13 @@ export default function Blog({ data }) {
         <h1>Blog</h1>
 
         <section className={styles.blogHeader}>
-          <p>a brain dump of some of my experiences. what&apos;s next?</p>
+          <p>
+            a brain dump of some of my{" "}
+            <Link href={"https://www.linkedin.com/in/brasileiro"}>
+              👋🏽 experiences
+            </Link>
+            . what&apos;s next?
+          </p>
           {/*<ol>*/}
           {/*  <li>Enable users to sign up (AWS Cognito)</li>*/}
           {/*  <li>Create newsletter flow (AWS SES, mail list feature)</li>*/}

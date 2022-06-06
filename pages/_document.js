@@ -17,17 +17,23 @@ class MyDocument extends Document {
         </Head>
         <body>
           <header className="header">
-            <Image
-              priority={true}
-              src="/codein-logo.webp"
-              alt="codein.ca photo"
-              width={425 / 6}
-              height={309 / 6}
-            />
-            <Link href={"/"}>🏠</Link>
-            <Link href={"https://www.linkedin.com/in/brasileiro"}>👋🏽 Hi!</Link>
-            <Link href={"https://www.paypal.com/paypalme/w3b3"}>💸 Pay</Link>
-            <Link href={"/blog"}>🤓</Link>
+            <Link passHref href={"/"}>
+              <a>
+                <Image
+                  priority={true}
+                  src="/codein-logo.webp"
+                  alt="codein.ca photo"
+                  width={425 / 6}
+                  height={309 / 6}
+                />
+              </a>
+            </Link>
+            <Link passHref href={"https://www.paypal.com/paypalme/w3b3"}>
+              <a target={"_blank"} className={"alwaysShow"} rel="noreferrer">
+                Would you buy me ☕️ coffee?
+              </a>
+            </Link>
+            <Link href={"/login"}>Login</Link>
           </header>
           <Main />
           <footer className="footer">
