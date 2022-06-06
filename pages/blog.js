@@ -26,7 +26,11 @@ const compareDescendingTimestamps = (a, b) => {
 };
 
 export default function Blog({ data }) {
-  const [posts, setPosts] = useState([...data.message]);
+  const [posts, setPosts] = useState([
+    ...data.message
+      .filter((el) => el.post_is_favorite)
+      .sort(compareDescendingTimestamps),
+  ]);
   const [categorias, setCategorias] = useState([]);
   const [filter, setFilter] = useState(null);
 
@@ -34,7 +38,9 @@ export default function Blog({ data }) {
     setPosts(
       data.message
         .filter((el) =>
-          filter ? el.post_category.toLocaleUpperCase().includes(filter) : true
+          filter
+            ? el.post_category.toLocaleUpperCase().includes(filter)
+            : el.post_is_favorite
         )
         .sort(compareDescendingTimestamps)
     );
