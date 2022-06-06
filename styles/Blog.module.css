@@ -92,6 +92,10 @@
   }
 
   .post .content {
+    line-height: 1.5;
+  }
+
+  .post a {
     line-height: 1;
   }
 }
