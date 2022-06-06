@@ -83,6 +83,7 @@
 .blogHeader {
   max-width: clamp(400px, 50vw, 800px);
   margin: 0 auto;
+  padding: 1em;
 }
 
 @media screen and (max-width: 640px) {

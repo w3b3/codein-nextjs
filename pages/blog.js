@@ -1,5 +1,4 @@
 import styles from "../styles/Blog.module.css";
-import Head from "next/head";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -53,11 +52,11 @@ export default function Blog({ data }) {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>codein.ca</title>
-        <meta name="description" content="codein.ca" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      {/*<Head>*/}
+      {/*  <title>codein.ca</title>*/}
+      {/*  <meta name="description" content="codein.ca" />*/}
+      {/*  <link rel="icon" href="/favicon.ico" />*/}
+      {/*</Head>*/}
 
       <main className={styles.main}>
         <h1>Blog</h1>
