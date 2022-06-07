@@ -8,6 +8,13 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+#__next {
+    display: flex;
     flex-direction: row-reverse;
 }
 
@@ -72,8 +79,7 @@ a:active {
 }
 
 @media screen and (max-width: 640px) {
-    body {
-        /*display: flex;*/
+    body, #__next {
         flex-direction: column;
     }
 

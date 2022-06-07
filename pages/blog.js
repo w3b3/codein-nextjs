@@ -1,6 +1,7 @@
 import styles from "../styles/Blog.module.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Layout from "../components/layout";
 
 export async function getServerSideProps(context) {
   const res = await fetch(`https://api.w-b.dev/blog/`);
@@ -58,7 +59,7 @@ export default function Blog({ data }) {
       {/*  <link rel="icon" href="/favicon.ico" />*/}
       {/*</Head>*/}
 
-      <main className={styles.main}>
+      <section className={styles.main}>
         <h1>Blog</h1>
 
         <section className={styles.blogHeader}>
@@ -109,7 +110,11 @@ export default function Blog({ data }) {
             </article>
           ))}
         </section>
-      </main>
+      </section>
     </div>
   );
 }
+
+Blog.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
+};
