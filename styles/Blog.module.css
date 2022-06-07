@@ -53,7 +53,7 @@
   color: whitesmoke;
   font-size: 0.8em;
   margin-left: auto;
-  width: clamp(100px, 30%, 50%);
+  width: clamp(150px, 60%, 400px);
   text-align: center;
 }
 

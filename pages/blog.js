@@ -67,7 +67,7 @@ export default function Blog({ data }) {
             <Link href={"https://www.linkedin.com/in/brasileiro"}>
               👋🏽 experiences
             </Link>
-            . what&apos;s next?
+            .
           </p>
           {/*<ol>*/}
           {/*  <li>Enable users to sign up (AWS Cognito)</li>*/}
