@@ -5,6 +5,7 @@
 }
 
 body {
+    width: 100vw;
     margin: 0;
     padding: 0;
     display: flex;
@@ -14,8 +15,13 @@ body {
 }
 
 #__next {
+    width: inherit;
     display: flex;
     flex-direction: row-reverse;
+}
+
+#__next > main {
+    flex: 1;
 }
 
 a {

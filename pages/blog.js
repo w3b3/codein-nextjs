@@ -80,26 +80,26 @@ export default function Blog({ data }) {
           {/*</ol>*/}
         </section>
         {/*<Link href="https://linkedin.ca/in/brasileiro">Daniel @LinkedIn</Link>*/}
-        <section className={styles.blogBody}>
-          <h2 className={styles.blogBodyTitle}>
-            Posts
-            <select
-              name="posts-selector"
-              id="posts-selector"
-              className={styles.postsSelector}
-              defaultValue={"__foo__"}
-              onChange={(el) => setFilter(el.target.value)}
-            >
-              <option value="__foo__" disabled={true}>
-                Select a tag
+        <h2 className={styles.blogBodyTitle}>
+          Posts
+          <select
+            name="posts-selector"
+            id="posts-selector"
+            className={styles.postsSelector}
+            defaultValue={"__foo__"}
+            onChange={(el) => setFilter(el.target.value)}
+          >
+            <option value="__foo__" disabled={true}>
+              Select a tag
+            </option>
+            {categorias.map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
               </option>
-              {categorias.map((cat) => (
-                <option key={cat} value={cat}>
-                  {cat}
-                </option>
-              ))}
-            </select>
-          </h2>
+            ))}
+          </select>
+        </h2>
+        <section className={styles.blogBody}>
           {posts.map((el, i) => (
             <article className={styles.post} key={el.post_id}>
               <p className={styles.content}>{el.post_title}</p>

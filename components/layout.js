@@ -23,7 +23,7 @@ export default function Layout({ children }) {
         </Link>
         <Link href={"/login"}>Login</Link>
       </header>
-      <div>{children}</div>
+      <main>{children}</main>
       <footer className="footer">
         <Link href={"https://github.com/w-b-dev"}>🦧Repos</Link>
         <Link href={"https://www.linkedin.com/my-items/saved-posts/"}>
