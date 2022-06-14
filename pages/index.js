@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
+import NoHeaderLayout from "../components/no-header-layout";
 
 export default function Home() {
   return (
@@ -10,32 +12,26 @@ export default function Home() {
         <meta name="description" content="codein.ca" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className={styles.main}>
-        <a href="https://codein.ca">🇨🇦 codein.ca</a>
-        <h1 style={{ textAlign: "center" }}>This is under construction</h1>
+        <Link href={"blog"} passHref>
+          <Image
+            priority={true}
+            quality={100}
+            src="/codein-logo.webp"
+            alt="codein.ca photo"
+            width={425}
+            height={309}
+            placeholder={"blur"}
+            blurDataURL={"/codein-logo-blur.webp"}
+          />
+        </Link>
 
-        <Image
-          src="/codein-logo.png"
-          alt="codein.ca photo"
-          width={500}
-          height={500}
-        />
-
-        <h3>
-          Made with love by{" "}
-          <span>
-            ️👨‍👩‍👧‍👦 <a href="https://linkedin.ca/in/brasileiro">Daniel @LinkedIn</a>
-          </span>
-        </h3>
-
-        <Image
-          src="/daniel_IMG_0655-with-certs.png"
-          alt="Daniel LinkedIn profile photo"
-          width={234}
-          height={234}
-        />
+        <h3>🚧 under development in 🇨🇦</h3>
       </main>
     </div>
   );
 }
+
+Home.getLayout = function getLayout(page) {
+  return <NoHeaderLayout>{page}</NoHeaderLayout>;
+};
