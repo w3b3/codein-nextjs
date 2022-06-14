@@ -51,7 +51,7 @@ a:active {
     border-left: 1px solid #ccc;
     z-index: 10;
     background-color: #fbfbfb;
-    min-width: clamp(50px, 20vw, 400px);
+    width: clamp(200px, 15vw, 360px);
     height: 100vh;
     top: 0;
     left: 0;
@@ -79,9 +79,19 @@ a:active {
     padding: 4px;
 }
 
-.footer a {
+.footer a, .sidebar-links a {
     margin: 0 4px;
     font-size: 0.8em;
+}
+
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    max-width: inherit;
+    height: inherit;
+    padding: 1rem;
 }
 
 @media screen and (max-width: 640px) {
