@@ -17,10 +17,16 @@ body {
 #__next {
     width: inherit;
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
 }
 
-#__next > main {
+#the-main-layout {
+    display: inherit;
+    flex-direction: column;
+    justify-content: inherit;
+    align-items: inherit;
+    width: inherit;
     flex: 1;
 }
 
@@ -43,9 +49,9 @@ a:active {
     /*border-bottom: 4px solid rgba(0, 0, 0, 0.8);*/
 }
 
-.header a, .header span {
-    text-align: center;
-}
+/*.header a, .header span {*/
+/*    text-align: center;*/
+/*}*/
 
 .header {
     border-left: 1px solid #ccc;
@@ -84,10 +90,14 @@ a:active {
     font-size: 0.8em;
 }
 
+#sign-out-layout {
+    margin: 0.5rem 1.5rem 0 auto;
+}
+
 .sidebar-links {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    /*align-items: flex-end;*/
     justify-content: space-around;
     max-width: inherit;
     height: inherit;
