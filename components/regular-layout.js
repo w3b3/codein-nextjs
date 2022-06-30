@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Authenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import { Amplify } from "aws-amplify";
-import awsExports from "../pages/aws-exports";
+import awsExports from "../aws-exports";
 import { useRouter } from "next/router";
 
 Amplify.configure(awsExports);
