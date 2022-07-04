@@ -1,7 +1,8 @@
-import styles from "../styles/Blog.module.css";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import Layout from "../components/layout";
+import Link from "next/link";
+import styles from "../styles/Blog.module.css";
+import Head from "next/head";
+import RegularLayout from "../components/regular-layout.js";
 
 export async function getServerSideProps(context) {
   const res = await fetch(`https://api.w-b.dev/blog/`);
@@ -52,69 +53,64 @@ export default function Blog({ data }) {
   }, [data.message]);
 
   return (
-    <div className={styles.container}>
-      {/*<Head>*/}
-      {/*  <title>codein.ca</title>*/}
-      {/*  <meta name="description" content="codein.ca" />*/}
-      {/*  <link rel="icon" href="/favicon.ico" />*/}
-      {/*</Head>*/}
-
-      <section className={styles.main}>
-        <h1>Blog</h1>
-
-        <section className={styles.blogHeader}>
-          <p>
-            a brain dump of some of my{" "}
-            <Link href={"https://www.linkedin.com/in/brasileiro"}>
-              👋🏽 experiences
-            </Link>
-            .
-          </p>
-          {/*<ol>*/}
-          {/*  <li>Enable users to sign up (AWS Cognito)</li>*/}
-          {/*  <li>Create newsletter flow (AWS SES, mail list feature)</li>*/}
-          {/*  <li>*/}
-          {/*    Enable authenticated users to add content (AWS Lambda, API*/}
-          {/*    Gateway, DataStax AstraDB - Apache Cassandra DBaaS)*/}
-          {/*  </li>*/}
-          {/*</ol>*/}
-        </section>
-        {/*<Link href="https://linkedin.ca/in/brasileiro">Daniel @LinkedIn</Link>*/}
-        <h2 className={styles.blogBodyTitle}>
-          Posts
-          <select
-            name="posts-selector"
-            id="posts-selector"
-            className={styles.postsSelector}
-            defaultValue={"__foo__"}
-            onChange={(el) => setFilter(el.target.value)}
-          >
-            <option value="__foo__" disabled={true}>
-              Select a tag
-            </option>
-            {categorias.map((cat) => (
-              <option key={cat} value={cat}>
-                {cat}
+    <>
+      <div className={styles.container}>
+        <Head>
+          <title>🔜codein.ca</title>
+          <meta name="description" content="codein.ca" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <section className={styles.main}>
+          <h1>
+            This is the blog{" "}
+            <span>
+              <Link href={"/"}>(or go 🏠)</Link>
+            </span>
+          </h1>
+          <section className={styles.blogHeader}>
+            <p>
+              here you can find a brain dump of some of my favorite links in
+              town, and not often, a personal reflection of my
+              <Link href={"https://www.linkedin.com/in/brasileiro"}>
+                👋🏽 experiences.
+              </Link>
+            </p>
+          </section>
+          <h2 className={styles.blogBodyTitle}>
+            Posts
+            <select
+              name="posts-selector"
+              id="posts-selector"
+              className={styles.postsSelector}
+              defaultValue={"__foo__"}
+              onChange={(el) => setFilter(el.target.value)}
+            >
+              <option value="__foo__" disabled={true}>
+                Select a tag
               </option>
+              {categorias.map((cat) => (
+                <option key={cat} value={cat}>
+                  {cat}
+                </option>
+              ))}
+            </select>
+          </h2>
+          <section className={styles.blogBody}>
+            {posts.map((el, i) => (
+              <article className={styles.post} key={el.post_id}>
+                <p className={styles.content}>{el.post_title}</p>
+                {el.post_body && (
+                  <Link href={el.post_body}>{el.post_body}</Link>
+                )}
+              </article>
             ))}
-          </select>
-        </h2>
-        <section className={styles.blogBody}>
-          {posts.map((el, i) => (
-            <article className={styles.post} key={el.post_id}>
-              <p className={styles.content}>{el.post_title}</p>
-              {el.post_body && <Link href={el.post_body}>{el.post_body}</Link>}
-              {/*<button disabled className={styles.postButton}>*/}
-              {/*  Edit*/}
-              {/*</button>*/}
-            </article>
-          ))}
+          </section>
         </section>
-      </section>
-    </div>
+      </div>
+    </>
   );
 }
 
 Blog.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
+  return <RegularLayout>{page}</RegularLayout>;
 };

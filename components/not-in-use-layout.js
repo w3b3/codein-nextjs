@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Layout({ children }) {
+export default function NotInUseLayout({ children }) {
   return (
     <>
       <header className="header">
-        <Link passHref href={"/"}>
+        <Link href={"/"}>
           <a>
             <Image
               priority={true}

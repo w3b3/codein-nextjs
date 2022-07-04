@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
-export default function NoHeaderLayout({ children }) {
+export default function RegularLayout({ children }) {
+  const { pathname } = useRouter();
   return (
-    <>
-      <main>{children}</main>
+    <main id={"the-main-layout"}>
+      <div id="no-header-children-slot">{children}</div>
 
       <footer className="footer">
         <Link href={"https://github.com/w-b-dev"}>🦧Repos</Link>
@@ -96,6 +98,6 @@ export default function NoHeaderLayout({ children }) {
           destroyallsoftware
         </Link>
       </footer>
-    </>
+    </main>
   );
 }
